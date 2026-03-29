@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", "Roboto Mono", monospace;
+  --color-terminal-green: #00ff41;
+  --color-terminal-bg: #0a0a0a;
+  --color-terminal-surface: #151619;
+  --color-terminal-border: #2a2b2e;
+}
+
+@layer base {
+  body {
+    @apply bg-terminal-bg text-gray-300 font-mono;
+  }
+}
+
+.terminal-card {
+  @apply bg-terminal-surface border border-terminal-border rounded-lg shadow-2xl;
+}
+
+.terminal-input {
+  @apply bg-black border border-terminal-border rounded px-3 py-2 text-terminal-green focus:border-terminal-green outline-none transition-colors;
+}
+
+.terminal-label {
+  @apply text-[10px] uppercase tracking-wider text-gray-500 mb-1 block font-bold;
+}
+
+.terminal-button {
+  @apply bg-terminal-green/10 border border-terminal-green/30 text-terminal-green px-4 py-2 rounded hover:bg-terminal-green/20 transition-all flex items-center justify-center gap-2;
+}
+
+.terminal-button-primary {
+  @apply bg-terminal-green text-black font-bold hover:bg-terminal-green/90;
+}
+
+.glow-green {
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.border-glow {
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-terminal-border rounded;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-700;
+}

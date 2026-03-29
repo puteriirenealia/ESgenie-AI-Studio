@@ -1,0 +1,7 @@
+{
+  "name": "ESGenie Agent",
+  "description": "Autonomous ESG intelligence agent that scans bills, calculates carbon footprints, and generates Bursa Malaysia-compliant reports.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
